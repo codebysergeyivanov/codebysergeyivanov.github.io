@@ -1,6 +1,6 @@
 let path = require('path');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+let MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 let conf = {
     entry: './src/js/index.js',
@@ -19,6 +19,7 @@ let conf = {
                 // "style-loader",
                 MiniCssExtractPlugin.loader,
                 "css-loader",
+                "postcss-loader",
                 "sass-loader"
             ]
         },
@@ -32,7 +33,7 @@ let conf = {
             }
         },
         {
-            test: /\.(png|jpg|gif)$/,
+            test: /\.(png|jpg|gif|ico)$/,
             use: [
                 {
                     loader: 'file-loader',
@@ -46,9 +47,10 @@ let conf = {
     },
     plugins: [new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.pug'),
+        favicon: path.resolve(__dirname, 'src/images/favicon.ico')
     }),
     new MiniCssExtractPlugin({
-        filename: "[name].css",
+        filename: "[name].css"
     })
     ],
 }
