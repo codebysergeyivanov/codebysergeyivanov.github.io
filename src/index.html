@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <title>Sergey Ivanov</title>
+  <link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+<header class="header-area" id="top">
+  <nav class="header-nav">
+    <div class="logo">Sergey Ivanov</div><span class="trigger-nav-list">&#9776</span>
+    <div class="scroll"> <a href="#top"> </a></div>
+    <ul class="nav-list">
+      <li><a href="#about">О себе</a></li>
+      <li><a href="#work">Работы</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <blockquote>
+          <h1 class="quote"> </h1>
+          <cite class="cite"> </cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+  <div class="arrow"><a href="#about"><i class="fas fa-angle-double-down anim"></i></a></div>
+</header>
+<div class="about" id="about">
+  <h1>O себе</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="images/13.jpg"></div>
+      <div class="col-md-6 text">
+        <p>Я начал изучать програмирование вначале марта 2018 года. Веб-разработка быстро стала моей страстью, я люблю создавать пользовательские интерфейсы и веб-страницы. Работаю со следующими технологиями: HTML5, CSS3, javaScript, React, Webpack, npm, bash, Bable, git и др. Я постоянно совершенствую свои навыки и знания в области IT, активно изучаю английский язык. Интересуюсь дизайном. В будущем хочу быть full stak. Сейчас же претендую на позищую junior frontend developer.     </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="work" id="work">
+  <h1>Работы</h1>
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-md-6 col-lg-4"><a class="projects gof" href="https://codebysergeyivanov.github.io/game-of-life/dist/" target="_blank"><img class="project-pic" src="images/gof.png" alt="Game Of Life">
+          <div class="project-title">Game Of Life</div></a></div>
+      <div class="col-md-6 col-lg-4"><a class="projects tttg" href="https://codebysergeyivanov.github.io/tic-tac-toe-game/" target="_blank"><img class="project-pic" src="images/tttg.png" alt="Tic Tac Toe Game">
+          <div class="project-title">Tic Tac Toe Game</div></a></div>
+    </div>
+    <div class="row justify-content-around">        
+      <div class="col-md-6 col-lg-4"><a class="projects calc" href="https://codebysergeyivanov.github.io/calculator-react-redux/" target="_blank"><img class="project-pic" src="images/calc.png" alt="Calculator">
+          <div class="project-title">Calculator</div></a></div>
+      <div class="col-md-6 col-lg-4"><a class="projects first-page" href="https://codebysergeyivanov.github.io/web-page/" target="_blank"><img class="project-pic" src="images/bp.png" alt="My first page">
+          <div class="project-title">Built page</div></a></div>
+    </div>
+  </div>
+</div>
+<div class="contact" id="contact">
+  <h1>Контакты</h1>
+  <div class="container">
+    <form class="row justify-content-center" id="input-form" action="" method="POST" target="no-target">
+      <div class="col-md-8 col-lg-6 box-form">
+        <p>Здесь Вы можете отправить мне сообщение и я вам отвечу, но это не точно </p>
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input class="form-style" id="name" type="text" placeholder="Имя" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Электронный адрес</label>
+          <input class="form-style" id="email" type="text" placeholder="E-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Сообщение</label>
+          <textarea class="form-style" id="message" type="text" placeholder="Cообщение" required></textarea>
+        </div>
+        <button class="btn-submit" type="submit">Отправить</button>
+        <iframe id="no-target" src="" name="no-target" width="0" height="0" style="visibility:hidden"></iframe>
+      </div>
+    </form>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="footer-area col">
+        <ul class="social">
+          <li><a href="https://github.com/codebysergeyivanov" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://codepen.io/sergeyivanov/" target="_blank"><i class="fab fa-codepen"></i></a></li>
+          <li><a class="link" href="https://github.com/codebysergeyivanov/codebysergeyivanov.github.io" target="_blank">Код проекта</a></li>
+        </ul>
+        <div class="copyright">2018 &copy</div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script type="text/javascript" src="js/main.js"></script></body>
+</html>
