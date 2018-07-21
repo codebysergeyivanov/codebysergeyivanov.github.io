@@ -110,8 +110,8 @@ $(function () {
     let count = 0;
 
     function showNextQuote() {
-        if (count < 5) {
-            return count++;
+        if (count < 4) {
+            return count += 1;
         }
         count = 0;
         return count;
