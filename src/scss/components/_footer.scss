@@ -1,0 +1,27 @@
+footer {
+    background-color: black;
+    color: #fff;
+        .social {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            list-style: none;
+            font-size: 30px;         
+             li {
+                 margin-right: 20px;
+                 a {
+                    color: #fff;
+                    text-decoration: none;  
+                 }
+                 .link {
+                     font-size: 20px;
+                 }
+             }
+        }
+        .copyright {
+            margin: 20px;
+            text-align: center;
+        }
+}

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+header.header-area {
+    position: relative;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    background: black url('../images/bg.gif') center right no-repeat fixed; 
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+
+    .header-nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        padding: 20px;
+        box-sizing: border-box;
+
+
+        .logo {         
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+    
+        .trigger-nav-list {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 2em;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .nav-list {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 1.5em;
+            li {
+                margin-left: 30px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    transition: .5s;
+                }
+                a:hover {
+                    color: yellow;
+                }
+            }
+        }
+    }
+ 
+    blockquote  {
+        margin: 0;
+        padding: 50px;
+        font-size: 3vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .arrow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        text-align: center;
+        font-size: 3em;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .anim {
+            position: relative;
+            animation: anim 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+        }
+        @keyframes anim {
+            to {
+                top: -10px;
+            }
+            from {
+                top: 10px;
+            }
+        }
+    }
+}
+
+.scroll {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-size: 3em;
+    display: none;
+    a {
+        text-decoration: none;
+        color: rgb(240, 17, 184);
+        text-shadow: 5px 5px 20px rgba(240, 17, 184, .5), -5px -5px 20px rgba(240, 17, 184, .5);
+    }
+    a::after {
+        content: '▲';
+    }
+}
+
+.scroll.up{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    header.header-area {
+        .header-nav .trigger-nav-list {
+                display: block;
+        }
+        .header-nav .nav-list {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 999;
+            li {
+                width: 100%;
+                margin: 10px;
+                text-align: center;
+                a {
+                    display: block;
+                }
+            }
+        }
+        .nav-list.open {
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+        }
+    }
+}
+

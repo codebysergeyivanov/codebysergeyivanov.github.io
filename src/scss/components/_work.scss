@@ -1,0 +1,80 @@
+.work {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(0,178,156) 60%, rgb(255,239,0) 60%, rgb(255,239,0) 40%) fixed ;
+    display: flex;
+    align-items: center;
+    h1 {
+        @extend %heading;
+    }
+
+    .projects {
+        position: relative;
+        display: block;
+        width: 100%;
+        border: 5px solid rgb(0, 0, 0);
+        margin-bottom: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, .8);
+        overflow: hidden;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: -300px;
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, .8);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        &.gof::after {
+            content: "Игра сделана на чистомм JS с применением паттерна MVC";
+        }
+        &.tttg::after {
+            content: "Игра крестики-нолики разработаная при помощи creat-react-app";
+        }
+        &.calc::after {
+            content: "Калькулятор react-redux";
+        }
+
+        &.first-page::after {
+            content: "Just a page";
+        }
+   
+        &:hover::after{
+            top: 0;
+            opacity: 1;
+        }
+
+    }
+    .project-pic {
+        position: relative;
+        width: 100%;
+    }
+
+    .project-title {
+        padding: 10px;
+        text-align: center;
+        background: black;
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    .work {
+        height: auto;
+        .row:nth-child(1) {
+            margin-top: 80px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+#contact.contact
+    h1 Контакты
+    .container
+        form#input-form.row.justify-content-center(action="", method="POST", target="no-target")
+            .col-md-8.col-lg-6.box-form
+                p Здесь Вы можете отправить мне сообщение и я вам отвечу, но это не точно 
+                .form-group
+                    label(for="name") Имя
+                    input#name.form-style(type="text", placeholder="Имя" required)
+                .form-group
+                    label(for="email") Электронный адрес
+                    input#email.form-style(type="text", placeholder="E-mail" required)
+                .form-group
+                    label(for="message") Сообщение
+                    textarea#message.form-style(type="text", placeholder="Cообщение" required)
+                button.btn-submit(type="submit") Отправить
+                iframe#no-target(src="#", name="no-target", width="0", height="0", style="visibility:hidden")
+                
+

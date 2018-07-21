@@ -6,7 +6,7 @@ let conf = {
     entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'main.js'
+        filename: 'js/main.js'
     },
     devServer: {
         overlay: true,
@@ -16,8 +16,8 @@ let conf = {
         rules: [{
             test: /\.(sa|sc|c)ss$/,
             use: [
-                // "style-loader",
-                MiniCssExtractPlugin.loader,
+                "style-loader",
+                // MiniCssExtractPlugin.loader,
                 "css-loader",
                 "postcss-loader",
                 "sass-loader"
@@ -38,7 +38,7 @@ let conf = {
                 {
                     loader: 'file-loader',
                     options: {
-                        name: 'images/[name].[ext]'
+                        name: 'images/[name].[ext]',
                     }
                 }
             ]
@@ -50,9 +50,9 @@ let conf = {
         favicon: path.resolve(__dirname, 'src/images/favicon.ico')
     }),
     new MiniCssExtractPlugin({
-        filename: "[name].css"
+        filename: "[name].css",
     })
-    ],
+    ]
 }
 
 module.exports = conf;
